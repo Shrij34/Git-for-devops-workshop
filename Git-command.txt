@@ -1,9 +1,22 @@
 git init
 git status
+
+
+Untracked ====>> Stage
 git add testing.py
-git rm --cached test.py
 git add .
+
+Stage ====>> untracked 
+git rm --cached test.py
+
+Stage ====>> Tracked 
 git commit -m "adding test file"
+
+to remove file
 rm .\test.py
-git status
+
+#restore deleted file 
 git restore test.py
+
+TO PUSH from my local (pc folder ) ====>> GITHub
+
