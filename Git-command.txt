@@ -1,0 +1,9 @@
+git init
+git status
+git add testing.py
+git rm --cached test.py
+git add .
+git commit -m "adding test file"
+rm .\test.py
+git status
+git restore test.py
