@@ -31,3 +31,7 @@ git branch
 
 #creating new branch with name devops
 git branch Dev
+
+#Switching between branchs 
+git switch branch_name
+git checkout branch_name
