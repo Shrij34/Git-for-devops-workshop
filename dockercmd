@@ -1,0 +1,34 @@
+docker build -t product .
+   8 docker run -p 3001:3001 product
+   9 npm init -y
+  10 npm install axios
+  11 npm install express
+  12 docker run -p 3001:3001 product
+  13 docker build -t product .
+  14 docker run -p 3001:3001 product
+  15 docker build -t product .
+  16 docker run -p 3001:3001 product
+  17 docker build -t product .
+  18 docker run -p 3001:3001 product
+  19 docker build -t product .
+  20 docker run -p 3001:3001 product
+  21 docker build -t product .
+  22 docker run -p 3001:3001 product
+  23 docker build -t product .
+  24 docker build -t product .
+  25 docker run -p 3001:3001 product
+  26 docker build -t product .
+  27 docker run -p 3001:3001 product
+  28 docker build -t product .
+  29 docker run -p 3001:3001 product
+  30 docker build -t product .
+  31 docker run -p 3001:3001 product
+  32 cd ..
+  33 cd user
+  34 cd .\userService\
+  35 npm init -y
+  36 npm install axios
+  37 npm install express
+  38 docker-compose build
+  39 docker-compose up
+  40 clear

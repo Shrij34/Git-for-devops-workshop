@@ -11,6 +11,8 @@ const orders = [
     { id: 2, userId: 2, productId: 2 }
 ];
 
+app.get('/', (req, res) => { res.send('Welcome to the OrderService Service!'); });
+
 app.get('/orders', (req, res) => {
     res.json(orders);
 });
