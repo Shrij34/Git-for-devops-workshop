@@ -9,6 +9,11 @@ const users = [
     { id: 2, name: "Bob" }
 ];
 
+// Default route for '/' 
+
+app.get('/', (req, res) => { res.send('Welcome to the User Service!'); });
+
+
 app.get('/users', (req, res) => {
     res.json(users);
 });
