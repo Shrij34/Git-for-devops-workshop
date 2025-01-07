@@ -5,12 +5,15 @@ services:
     build: ./userService
     ports:
       - "3001:3001"
+    depends_on: 
+    - trivy_scan
 
   order_service:
     build: ./orderService
     ports:
       - "3002:3002"
     depends_on:
+      - trivy_scan
       - user_service
       - product_service
 
@@ -18,3 +21,25 @@ services:
     build: ./productService
     ports:
       - "3003:3003"
+    depends_on: 
+    - trivy_scan
+
+
+  trivy_scan:
+    image: aquasec/trivy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - trivy-cache:/root/.cache/
+      - ./trivy-reports:/trivy-reports
+    entrypoint: >
+      sh -c "
+        trivy image -f json -o /trivy-reports/user_service_report.json /user_service:latest &&
+        trivy image -f json -o /trivy-reports/order_service_report.json /order_service:latest &&
+        trivy image -f json -o /trivy-reports/product_service_report.json /product_service:latest
+      "
+    deploy:
+      restart_policy:
+        condition: none
+
+volumes:
+  trivy-cache:
