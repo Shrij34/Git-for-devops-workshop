@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  user_service:
+    build: ./userService
+    ports:
+      - "3001:3001"
+
+  order_service:
+    build: ./orderService
+    ports:
+      - "3002:3002"
+    depends_on:
+      - user_service
+      - product_service
+
+  product_service:
+    build: ./productService
+    ports:
+      - "3003:3003"
