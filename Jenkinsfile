@@ -9,9 +9,12 @@ pipeline {
     }
 
     stages {
+
         stage('Clone Repository') {
             steps {
-                checkout scm
+                withCredentials([string(credentialsId: 'nodejs', variable: 'Nodejs')]) {
+                sh 'git clone https://github.com/Shrij34/Git-for-devops-workshop.git'
+                }
             }
         }
 
