@@ -10,6 +10,12 @@ pipeline {
 
     stages {
 
+        stage('Clean Workspace') {
+            steps {
+                sh 'rm -rf Git-for-devops-workshop'
+            }
+        }
+
         stage('Clone Repository') {
             steps {
                 withCredentials([string(credentialsId: 'nodejs', variable: 'Nodejs')]) {
