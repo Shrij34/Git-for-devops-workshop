@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     environment {
-        ORDER_IMAGE_NAME = "orderService"
-        PRODUCT_IMAGE_NAME = "productService"
-        USER_IMAGE_NAME = "userService"
+        ORDER_IMAGE_NAME = "orderservice" 
+        PRODUCT_IMAGE_NAME = "productservice" 
+        USER_IMAGE_NAME = "userservice" 
         LOCAL_REGISTRY = "localhost:5000"
     }
 
